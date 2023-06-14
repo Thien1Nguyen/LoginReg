@@ -5,13 +5,14 @@
     asp-action="Login" 
     method="Post"
 >
-    <span class="text-danger" asp-validation-for="LoginEmail"></span> 
+    <span class="text-danger" asp-validation-for="LoginEmail"></span>
+    <span class="text-danger" asp-validation-for="LoginPassword"></span> 
     <div class="mb-3">
         <label asp-for="LoginEmail">Email </label>
         <input type="text" asp-for="LoginEmail" class="form-control">
     </div>
     <div class="mb-3">
-        <label asp-for="LoginPassword">Password <span class="text-danger" asp-validation-for="LoginPassword"></span> </label>
+        <label asp-for="LoginPassword">Password </label>
         <input type="password" asp-for="LoginPassword" class="form-control">
     </div>
 
