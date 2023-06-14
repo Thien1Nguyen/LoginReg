@@ -71,13 +71,9 @@ public class HomeController : Controller
     }
 
     [HttpGet("success")]
+    [SessionCheck]
     public IActionResult Success()
     {
-        int? UserId = HttpContext.Session.GetInt32("UserId");
-        if(UserId == null)
-        {
-            return RedirectToAction("Index");
-        }
         return View("Success");
     }
 
